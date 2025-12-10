@@ -5,6 +5,8 @@ import { Subheading } from '../sub-heading'
 import { Card, CardContent, CardCTA, CardSkeleton, CardTitle } from './card'
 import { IconPlus } from '@tabler/icons-react'
 import { SkeletonOne } from './skeletons/first'
+import { SkeletonThree } from './skeletons/three'
+import { SkeletonTwo } from './skeletons/two'
 
 export const Features = () => {
     return (
@@ -20,7 +22,7 @@ export const Features = () => {
                 </Subheading>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6">
                 <Card className='md:rounded-tl-3xl md:rounded-bl-3xl'>
                     <CardSkeleton>
                         <SkeletonOne />
@@ -28,7 +30,7 @@ export const Features = () => {
                     <CardContent>
                         <div className='flex items-start justify-between gap-4'>
                             <CardTitle>Prebuilt Agents, Tuned to Your Workflows</CardTitle>
-                            <CardCTA>
+                            <CardCTA aria-label="Learn more about prebuilt agents">
                                 <IconPlus className='size-4 md:size-5' />
                             </CardCTA>
                         </div>
@@ -37,11 +39,12 @@ export const Features = () => {
 
                 <Card>
                     <CardSkeleton>
+                        <SkeletonTwo />
                     </CardSkeleton>
                     <CardContent>
                         <div className='flex items-start justify-between gap-4'>
                             <CardTitle>Automate Handoffs, Reduce Ops Friction</CardTitle>
-                            <CardCTA>
+                            <CardCTA aria-label="Learn more about automation">
                                 <IconPlus className='size-4 md:size-5' />
                             </CardCTA>
                         </div>
@@ -50,11 +53,12 @@ export const Features = () => {
 
                 <Card className='md:rounded-tr-3xl md:rounded-br-3xl'>
                     <CardSkeleton>
+                        <SkeletonThree />
                     </CardSkeleton>
                     <CardContent>
                         <div className='flex items-start justify-between gap-4'>
                             <CardTitle>Approvals, Guardrails, and Full Auditability</CardTitle>
-                            <CardCTA>
+                            <CardCTA aria-label="Learn more about security and approvals">
                                 <IconPlus className='size-4 md:size-5' />
                             </CardCTA>
                         </div>

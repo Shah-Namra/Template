@@ -6,7 +6,7 @@ export const Card = ({ className, children }: {
     children: React.ReactNode,
 }) => {
     return (
-        <div className={cn("bg-neutral-50 dark:bg-neutral-800 rounded-lg ", children)}>{children}</div>
+        <div className={cn("bg-neutral-50 dark:bg-neutral-800 rounded-lg ", className)}>{children}</div>
     )
 }
 
@@ -24,7 +24,7 @@ export const CardContent = ({ className, children }: {
     children: React.ReactNode,
 }) => {
     return (
-        <p className={cn("px-4 md:px-6 pb-6 md:pb-12 ", className)}>{children}</p>
+        <div className={cn("px-4 md:px-6 pb-6 md:pb-12 ", className)}>{children}</div>
     )
 }
 
@@ -44,12 +44,12 @@ export const CardCTA = ({ className, children, ...rest }: React.ComponentProps<'
     )
 }
 
-export const CardSkeleton = ({className, children}: {
-    className ?: string,
+export const CardSkeleton = ({ className, children }: {
+    className?: string,
     children?: React.ReactNode
-})=>{
+}) => {
     return (
-        <div className={cn('relative min-h-40 md:min-h-80 ', className)}>
+        <div className={cn('relative min-h-40 md:min-h-80  overflow-hidden', className)}>
             {children}
         </div>
     )
