@@ -121,9 +121,22 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-
   --shadow-brand: var(--shadow-brand);
-}
+
+  --animate-orbit: orbit var(--orbit-duration) linear infinite;
+
+  @keyframes orbit{
+    0%{
+      transform: rotate(0deg) 
+      translate(var(--translate-position)) 
+      rotate(0deg);
+    }
+    100%{
+      transform: rotate(360deg) 
+      translate(var(--translate-position)) 
+      rotate(-360deg);
+  }
+}}
 
 @layer base {
   * {

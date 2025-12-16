@@ -9,7 +9,7 @@ export const SkeletonTwo = () => {
     return (
         <div
             style={{
-                transform: "rotateY(20deg) rotateX(40deg) rotateZ(-20deg)"
+                transform: "rotateY(8deg) rotateX(15deg) rotateZ(-3deg) scale(0.95)",
             }}
             className={cn(
                 "max-w-[85%] h-80 my-auto bg-neutral-100 dark:bg-neutral-900 mx-auto w-full p-3 rounded-2xl border border-neutral-300 dark:border-neutral-700 shadow-2xl flex flex-col group"
@@ -25,7 +25,7 @@ export const SkeletonTwo = () => {
             <div className="relative overflow-visible flex-1 bg-neutral-200 dark:bg-neutral-800 mt-4 border border-neutral-200 dark:border-neutral-700 rounded-2xl">
                 <Pattern />
 
-                <div className="absolute inset-0 bg-white dark:bg-neutral-950 h-full w-full rounded-2xl translate-x-3 -translate-y-3 scale-[1.02] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out shadow-lg group-hover:shadow-xl overflow-hidden">
+                <div className="absolute inset-0 bg-white dark:bg-neutral-950 h-full w-full rounded-2xl translate-x-2 -translate-y-2 scale-[1.02] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:scale-100 transition-all duration-300 ease-out shadow-lg group-hover:shadow-xl overflow-hidden">
                     <Row
                         icon={<IconCheck className='size-3 stroke-white text-green-500' />}
                         text="Fetching Data"
