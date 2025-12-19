@@ -4,9 +4,7 @@ import { Hero } from "@/components/hero";
 import { LogoCloud } from "@/components/logo-cloud";
 import { Speed } from "@/components/speed";
 import { Outcome } from "@/components/outcome";
-//import { ModeToggle } from "@/components/mode-toggle";
-import Image from "next/image";
-
+import { FeaturersTertiary } from "@/components/features-tertiary";
 export default function Home() {
   return (
     <div className="min-h-screen font-display ">
@@ -17,6 +15,7 @@ export default function Home() {
       <Speed />
       <FeaturesSecondary />
       <Outcome />
+      <FeaturersTertiary />
     </div>
   );
 }

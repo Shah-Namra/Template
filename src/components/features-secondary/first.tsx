@@ -52,27 +52,24 @@ export const Card =({topIcon, title, description, tags}:{
 
     return(
         <div className=" p-4 shadow-black/10 gap-4 rounded-[16px] bg-white border border-trasparent ring-1 ring-black/10 flex items-start"> 
-       <div className={cn(
-   "size-6 shrink-0 mt-1 rounded-full items-center flex justify-center",
-   randomColors[Math.floor(Math.random()*randomColors.length)]
-)}>
-
-           {topIcon}
-        </div>
-        <div> 
-            <p className="text-lg font-bold text-neutral-800">
-                {title}
-            </p>
-            <p className="text-base  text-neutral-600">
-                {description}
-            </p>
-            <div className="mt-2 flex flex-row flex-wrap gap-2 items-center">
-                {tags?.map((tag, index)=>(
-                    <Tag key={index} text={tag.text} icon={tag.icon} />
-                ))}
-       </div>
-        </div>
-        
+            <div className={cn("size-6 shrink-0 mt-1 rounded-full items-center flex justify-center",
+                randomColors[Math.floor(Math.random()*randomColors.length)]
+            )}>
+                {topIcon}
+            </div>
+            <div> 
+                <p className="text-lg font-bold text-neutral-800">
+                    {title}
+                </p>
+                <p className="text-base  text-neutral-600">
+                    {description}
+                </p>
+                <div className="mt-2 flex flex-row flex-wrap gap-2 items-center">
+                    {tags?.map((tag, index)=>(
+                        <Tag key={index} text={tag.text} icon={tag.icon} />
+                    ))}
+                </div>
+            </div>
         </div>
     )
 }
